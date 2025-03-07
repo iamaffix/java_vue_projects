@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd"
+    xmlns:util="http://www.springframework.org/schema/util"
+    > 
+    
+    <util:list list-class="java.util.LinkedList" id="phone2">
+    	<value> 86878</value>
+    	<value>868798</value>
+    </util:list>
+    
+    <bean class="com.springcore.collections.Emp" name="emp">
+    	<property name="name" >
+    		<value>ashish</value>
+    	</property>
+    	
+    	<property name="phones">
+    		<list>
+    			<value>34239259</value>
+    			<value>94597395</value>
+    		</list>
+    	</property>
+    	
+    	<property name="phone2" ref="phone2" ></property>
+    	
+    	<property name="address">
+    		<set>
+    			<value>delhi</value>
+    			<value>lucknow</value>
+    			<value>mumbai</value>
+    		</set>
+    	</property>
+    	
+    	<property name="courses">
+    		<map>
+    			<entry key="java" value="2MONTH"></entry>
+    			<entry key="python" value="3 month" />
+    		</map>
+    	</property>
+    </bean>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+   <!--
+	<bean class="com.springcore.autowire.Address" name="address" p:street="6" p:city="noida" />
+    <bean class="com.springcore.autowire.Name" name="Name" p:name="Mukkadar ka sikandar" autowire="byName" />   -->
+   <!--there are different kinds of autowire like name type just experiment and see-->
+   
+   <!--using @autowired annotation-->
+	<context:annotation-config />
+   <bean class="com.springcore.autowire.Address" name="address" p:street="8" p:city="delhi" />
+   <bean class="com.springcore.autowire.Name" name="Name" p:name="kallu kaliya" />
+</beans>

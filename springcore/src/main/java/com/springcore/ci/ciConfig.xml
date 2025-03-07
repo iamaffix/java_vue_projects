@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+	<import resource="classpath:com/springcore/config.xml" />
+   <bean class="com.springcore.ci.Person" name="Person">
+   		<constructor-arg value="Durgesh" />
+   		<constructor-arg value="12" />
+   		<constructor-arg ref="student1" />
+   		<constructor-arg>
+   			<list>
+   			 <value>dilip</value>
+   			 <value>neha</value>
+   			 <value>suman</value>
+   			</list>
+   		</constructor-arg>
+   		<!-- <constructor-arg value="12" type="int" />-->
+   </bean>
+   <bean class="com.springcore.ci.Person" name="Person2" c:name="Aman" c:personId="15" c:student-ref="student1">
+   		<constructor-arg>
+            <list>
+                <value>suman</value>
+                <value>neha</value>
+            </list>
+        </constructor-arg>
+   </bean>
+   
+   <!--for method overloading
+   <constructor-arg valu'3423' type="int" index="1"></constructor-arg>-->
+</beans>
